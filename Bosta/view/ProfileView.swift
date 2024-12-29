@@ -28,7 +28,7 @@ struct ProfileView: View {
                 }
 
                Text("My Albums")
-                   .font(.title2)
+                   .font(.title)
                    .padding([.top, .bottom, .leading])
                
                List(viewModel.albums, id: \.id) { album in

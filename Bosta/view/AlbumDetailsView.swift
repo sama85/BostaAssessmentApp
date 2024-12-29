@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Combine
 
 struct AlbumDetailsView: View {
     let album: Album
@@ -35,45 +36,22 @@ struct AlbumDetailsView: View {
                     GridItem(.flexible()),
                     GridItem(.flexible()),
                     GridItem(.flexible())], spacing: 0) {
-                        ForEach(searchedPhotos, id: \ .id) { photo in
-                            // load photo from its url
-                            AsyncImage(url: URL(string: photo.url)) { phase in
-                                switch phase {
-                                case .empty:
-                                    ProgressView()
-                                        .frame(maxWidth: .infinity, maxHeight: .infinity)
-                                case .success(let image):
-                                    image
-                                        .resizable()
-                                        .scaledToFit()
-                                        .frame(maxWidth: .infinity, maxHeight: .infinity)
-                                case .failure:
-                                    // if photo fails to load from url, try loading from thumbnail url
-                                    AsyncImage(url: URL(string: photo.thumbnailUrl)) { thumbnailPhase in
-                                        switch thumbnailPhase {
-                                        case .empty:
-                                            ProgressView()
-                                                .frame(maxWidth: .infinity, maxHeight: .infinity)
-                                        case .success(let thumbnail):
-                                            thumbnail
-                                                .resizable()
-                                                .scaledToFit()
-                                                .frame(maxWidth: .infinity, maxHeight: .infinity)
-                                        case .failure:
-                                            // default image if photo fails to load from thumbnail url
-                                            Image(systemName: "photo.fill")
-                                                .resizable()
-                                                .scaledToFit()
-                                                .frame(maxWidth: .infinity, maxHeight: .infinity)
-                                        @unknown default:
-                                            EmptyView()
-                                        }
-                                    }
-                                @unknown default:
-                                    EmptyView()
+                        ForEach(searchedPhotos, id: \.id) { photo in
+                            if let url = URL(string: photo.url) {
+                                AsyncImageView(url: url)
+                                    .frame(height: 100)
+                            } else {
+                                if let thumbnailUrl = URL(string: photo.thumbnailUrl) {
+                                    AsyncImageView(url: thumbnailUrl)
+                                        .frame(height: 100)
+                                } else {
+                                    // handle invalid URL
+                                    Image(systemName: "photo.fill")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(height: 100)
                                 }
                             }
-                            .frame(height: 100)
                         }
                     }
                     .padding(0)
@@ -104,6 +82,21 @@ struct SearchBar: View {
     }
 }
 
+struct AsyncImageView: View {
+    @StateObject private var imageLoader = ImageLoader()
+    let url: URL
+    
+    var body: some View {
+        if let uiImage = imageLoader.image {
+            Image(uiImage: uiImage)
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+        } else {
+            ProgressView()
+                .onAppear { imageLoader.loadImage(from: url) }
+        }
+    }
+}
 
 struct AlbumDetailsView_Previews: PreviewProvider {
     static var previews: some View {

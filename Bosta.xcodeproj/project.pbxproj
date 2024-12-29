@@ -12,6 +12,7 @@
 		2225CB2F2D20A0C50092C424 /* photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2225CB2E2D20A0C50092C424 /* photo.swift */; };
 		2225CB312D20A1AF0092C424 /* AlbumDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2225CB302D20A1AF0092C424 /* AlbumDetailsViewModel.swift */; };
 		2225CB352D20A3350092C424 /* AlbumDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2225CB342D20A3350092C424 /* AlbumDetailsView.swift */; };
+		2225CB382D21C43F0092C424 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2225CB372D21C43F0092C424 /* ImageLoader.swift */; };
 		224DB28C2D1F6C1100E488CA /* BostaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224DB28B2D1F6C1100E488CA /* BostaApp.swift */; };
 		224DB28E2D1F6C1200E488CA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224DB28D2D1F6C1200E488CA /* ContentView.swift */; };
 		224DB2902D1F6C1400E488CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 224DB28F2D1F6C1400E488CA /* Assets.xcassets */; };
@@ -47,6 +48,7 @@
 		2225CB2E2D20A0C50092C424 /* photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = photo.swift; sourceTree = "<group>"; };
 		2225CB302D20A1AF0092C424 /* AlbumDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDetailsViewModel.swift; sourceTree = "<group>"; };
 		2225CB342D20A3350092C424 /* AlbumDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDetailsView.swift; sourceTree = "<group>"; };
+		2225CB372D21C43F0092C424 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 		224DB2882D1F6C1100E488CA /* Bosta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bosta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		224DB28B2D1F6C1100E488CA /* BostaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BostaApp.swift; sourceTree = "<group>"; };
 		224DB28D2D1F6C1200E488CA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -89,6 +91,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2225CB362D21C4240092C424 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				2225CB372D21C43F0092C424 /* ImageLoader.swift */,
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
 		224DB27F2D1F6C1100E488CA = {
 			isa = PBXGroup;
 			children = (
@@ -113,6 +123,7 @@
 		224DB28A2D1F6C1100E488CA /* Bosta */ = {
 			isa = PBXGroup;
 			children = (
+				2225CB362D21C4240092C424 /* utils */,
 				224DB2BC2D1F71EE00E488CA /* networking */,
 				224DB2BB2D1F6EB500E488CA /* viewmodel */,
 				224DB2BA2D1F6E9800E488CA /* model */,
@@ -334,6 +345,7 @@
 				2225CB312D20A1AF0092C424 /* AlbumDetailsViewModel.swift in Sources */,
 				224DB2BE2D1F720700E488CA /* user.swift in Sources */,
 				224DB28E2D1F6C1200E488CA /* ContentView.swift in Sources */,
+				2225CB382D21C43F0092C424 /* ImageLoader.swift in Sources */,
 				224DB2B92D1F6E7400E488CA /* ProfileView.swift in Sources */,
 				224DB28C2D1F6C1100E488CA /* BostaApp.swift in Sources */,
 				224DB2C22D1F738F00E488CA /* APIService.swift in Sources */,
@@ -506,6 +518,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -534,6 +547,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
