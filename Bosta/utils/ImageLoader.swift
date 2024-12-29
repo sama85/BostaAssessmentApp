@@ -11,13 +11,18 @@ import SwiftUI
 
 class ImageLoader: ObservableObject {
     @Published var image: UIImage? = nil
-    private var cancellable: AnyCancellable? = nil
 
     func loadImage(from url: URL) {
-        cancellable = URLSession.shared.dataTaskPublisher(for: url)
-            .map { UIImage(data: $0.data) }
-            .replaceError(with: nil)
-            .receive(on: DispatchQueue.main)
-            .assign(to: \.image, on: self)
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            if let data = data, let uiImage = UIImage(data: data) {
+                DispatchQueue.main.async {
+                    self.image = uiImage
+                }
+            } else {
+                DispatchQueue.main.async {
+                    self.image = nil
+                }
+            }
+        }.resume()
     }
 }
