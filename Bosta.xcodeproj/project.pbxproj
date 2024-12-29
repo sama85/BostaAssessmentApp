@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2225CB2B2D1F7A470092C424 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 2225CB2A2D1F7A470092C424 /* Moya */; };
+		2225CB2D2D1F7AAE0092C424 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2225CB2C2D1F7AAE0092C424 /* ProfileViewModel.swift */; };
+		2225CB2F2D20A0C50092C424 /* photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2225CB2E2D20A0C50092C424 /* photo.swift */; };
+		2225CB312D20A1AF0092C424 /* AlbumDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2225CB302D20A1AF0092C424 /* AlbumDetailsViewModel.swift */; };
+		2225CB352D20A3350092C424 /* AlbumDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2225CB342D20A3350092C424 /* AlbumDetailsView.swift */; };
 		224DB28C2D1F6C1100E488CA /* BostaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224DB28B2D1F6C1100E488CA /* BostaApp.swift */; };
 		224DB28E2D1F6C1200E488CA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224DB28D2D1F6C1200E488CA /* ContentView.swift */; };
 		224DB2902D1F6C1400E488CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 224DB28F2D1F6C1400E488CA /* Assets.xcassets */; };
@@ -14,6 +19,10 @@
 		224DB29D2D1F6C1400E488CA /* BostaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224DB29C2D1F6C1400E488CA /* BostaTests.swift */; };
 		224DB2A72D1F6C1400E488CA /* BostaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224DB2A62D1F6C1400E488CA /* BostaUITests.swift */; };
 		224DB2A92D1F6C1400E488CA /* BostaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224DB2A82D1F6C1400E488CA /* BostaUITestsLaunchTests.swift */; };
+		224DB2B92D1F6E7400E488CA /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224DB2B82D1F6E7400E488CA /* ProfileView.swift */; };
+		224DB2BE2D1F720700E488CA /* user.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224DB2BD2D1F720700E488CA /* user.swift */; };
+		224DB2C02D1F731500E488CA /* album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224DB2BF2D1F731500E488CA /* album.swift */; };
+		224DB2C22D1F738F00E488CA /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224DB2C12D1F738F00E488CA /* APIService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +43,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2225CB2C2D1F7AAE0092C424 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		2225CB2E2D20A0C50092C424 /* photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = photo.swift; sourceTree = "<group>"; };
+		2225CB302D20A1AF0092C424 /* AlbumDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDetailsViewModel.swift; sourceTree = "<group>"; };
+		2225CB342D20A3350092C424 /* AlbumDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDetailsView.swift; sourceTree = "<group>"; };
 		224DB2882D1F6C1100E488CA /* Bosta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bosta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		224DB28B2D1F6C1100E488CA /* BostaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BostaApp.swift; sourceTree = "<group>"; };
 		224DB28D2D1F6C1200E488CA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -44,6 +57,10 @@
 		224DB2A22D1F6C1400E488CA /* BostaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BostaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		224DB2A62D1F6C1400E488CA /* BostaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BostaUITests.swift; sourceTree = "<group>"; };
 		224DB2A82D1F6C1400E488CA /* BostaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BostaUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		224DB2B82D1F6E7400E488CA /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		224DB2BD2D1F720700E488CA /* user.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = user.swift; sourceTree = "<group>"; };
+		224DB2BF2D1F731500E488CA /* album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = album.swift; sourceTree = "<group>"; };
+		224DB2C12D1F738F00E488CA /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2225CB2B2D1F7A470092C424 /* Moya in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +96,7 @@
 				224DB29B2D1F6C1400E488CA /* BostaTests */,
 				224DB2A52D1F6C1400E488CA /* BostaUITests */,
 				224DB2892D1F6C1100E488CA /* Products */,
+				224DB2C42D1F761200E488CA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -94,6 +113,10 @@
 		224DB28A2D1F6C1100E488CA /* Bosta */ = {
 			isa = PBXGroup;
 			children = (
+				224DB2BC2D1F71EE00E488CA /* networking */,
+				224DB2BB2D1F6EB500E488CA /* viewmodel */,
+				224DB2BA2D1F6E9800E488CA /* model */,
+				224DB2B52D1F6C2A00E488CA /* view */,
 				224DB28B2D1F6C1100E488CA /* BostaApp.swift */,
 				224DB28D2D1F6C1200E488CA /* ContentView.swift */,
 				224DB28F2D1F6C1400E488CA /* Assets.xcassets */,
@@ -127,6 +150,49 @@
 			path = BostaUITests;
 			sourceTree = "<group>";
 		};
+		224DB2B52D1F6C2A00E488CA /* view */ = {
+			isa = PBXGroup;
+			children = (
+				224DB2B82D1F6E7400E488CA /* ProfileView.swift */,
+				2225CB342D20A3350092C424 /* AlbumDetailsView.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		224DB2BA2D1F6E9800E488CA /* model */ = {
+			isa = PBXGroup;
+			children = (
+				224DB2BD2D1F720700E488CA /* user.swift */,
+				224DB2BF2D1F731500E488CA /* album.swift */,
+				2225CB2E2D20A0C50092C424 /* photo.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		224DB2BB2D1F6EB500E488CA /* viewmodel */ = {
+			isa = PBXGroup;
+			children = (
+				2225CB2C2D1F7AAE0092C424 /* ProfileViewModel.swift */,
+				2225CB302D20A1AF0092C424 /* AlbumDetailsViewModel.swift */,
+			);
+			path = viewmodel;
+			sourceTree = "<group>";
+		};
+		224DB2BC2D1F71EE00E488CA /* networking */ = {
+			isa = PBXGroup;
+			children = (
+				224DB2C12D1F738F00E488CA /* APIService.swift */,
+			);
+			path = networking;
+			sourceTree = "<group>";
+		};
+		224DB2C42D1F761200E488CA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +209,9 @@
 			dependencies = (
 			);
 			name = Bosta;
+			packageProductDependencies = (
+				2225CB2A2D1F7A470092C424 /* Moya */,
+			);
 			productName = Bosta;
 			productReference = 224DB2882D1F6C1100E488CA /* Bosta.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +284,9 @@
 				Base,
 			);
 			mainGroup = 224DB27F2D1F6C1100E488CA;
+			packageReferences = (
+				2225CB292D1F79D80092C424 /* XCRemoteSwiftPackageReference "Moya" */,
+			);
 			productRefGroup = 224DB2892D1F6C1100E488CA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -257,8 +329,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2225CB2F2D20A0C50092C424 /* photo.swift in Sources */,
+				2225CB352D20A3350092C424 /* AlbumDetailsView.swift in Sources */,
+				2225CB312D20A1AF0092C424 /* AlbumDetailsViewModel.swift in Sources */,
+				224DB2BE2D1F720700E488CA /* user.swift in Sources */,
 				224DB28E2D1F6C1200E488CA /* ContentView.swift in Sources */,
+				224DB2B92D1F6E7400E488CA /* ProfileView.swift in Sources */,
 				224DB28C2D1F6C1100E488CA /* BostaApp.swift in Sources */,
+				224DB2C22D1F738F00E488CA /* APIService.swift in Sources */,
+				224DB2C02D1F731500E488CA /* album.swift in Sources */,
+				2225CB2D2D1F7AAE0092C424 /* ProfileViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -579,6 +659,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2225CB292D1F79D80092C424 /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2225CB2A2D1F7A470092C424 /* Moya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2225CB292D1F79D80092C424 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = Moya;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 224DB2802D1F6C1100E488CA /* Project object */;
 }

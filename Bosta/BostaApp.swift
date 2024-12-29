@@ -11,7 +11,7 @@ import SwiftUI
 struct BostaApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ProfileView()
         }
     }
 }
