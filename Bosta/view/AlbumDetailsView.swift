@@ -37,15 +37,17 @@ struct AlbumDetailsView: View {
                     GridItem(.flexible()),
                     GridItem(.flexible())], spacing: 0) {
                         ForEach(searchedPhotos, id: \.id) { photo in
+                            // load image from its url
                             if let url = URL(string: photo.url) {
                                 AsyncImageView(url: url)
                                     .frame(height: 100)
                             } else {
+                                // try loading image from thumbnail url
                                 if let thumbnailUrl = URL(string: photo.thumbnailUrl) {
                                     AsyncImageView(url: thumbnailUrl)
                                         .frame(height: 100)
                                 } else {
-                                    // handle invalid URL
+                                    // handle photos with invalid url & thumbnail url by displaying placeholder image
                                     Image(systemName: "photo.fill")
                                     .resizable()
                                     .scaledToFit()
